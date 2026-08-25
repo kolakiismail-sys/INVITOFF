@@ -394,7 +394,7 @@
 
 <button id="musicToggle" class="music-toggle" type="button" aria-label="Activer la musique">
   <span id="musicIcon">🔇</span>
-  <span id="musicLabel">Son désactivé</span>
+  <span id="musicLabel"></span>
 </button>
 
 
@@ -653,13 +653,13 @@ function updateMusicButton() {
     musicToggle.classList.add('muted');
     musicToggle.classList.remove('playing');
     musicIcon.textContent = '🔇';
-    musicLabel.textContent = 'Son désactivé';
+    musicLabel.textContent = '';
     musicToggle.setAttribute('aria-label', 'Activer la musique');
   } else {
     musicToggle.classList.remove('muted');
     musicToggle.classList.add('playing');
     musicIcon.textContent = '♫';
-    musicLabel.textContent = 'Musique activée';
+    musicLabel.textContent = '';
     musicToggle.setAttribute('aria-label', 'Désactiver la musique');
   }
 }
